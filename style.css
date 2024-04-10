@@ -4,21 +4,29 @@
     overflow: hidden; /* Para ocultar el desbordamiento */
      text-align: center;
   }
-  
-  .carousel-inner {
+
+.carousel-inner {
     width: 100%;
     height: 100%;
-  }
-  
-  .carousel-item {
+    }
+
+.carousel-item {
     width: 100%;
     height: 100%;
     text-align: center; /* Para centrar la imagen horizontalmente */
-  }
-  
-  .carousel-item img {
+    }
+
+.carousel-item img {
     max-width: 100%; /* La imagen se ajustará al ancho del carrusel */
     max-height: 100%; /* La imagen se ajustará al alto del carrusel */
     margin: auto; /* Centrar verticalmente */
-  }
+    }
 
+.moverennavbar{
+    margin-left: auto;
+}
+
+.nav-link .active:hover{
+    color:brown;
+
+}
