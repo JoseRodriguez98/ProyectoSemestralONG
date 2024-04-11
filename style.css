@@ -22,11 +22,38 @@
     margin: auto; /* Centrar verticalmente */
     }
 
-.moverennavbar{
-    margin-left: auto;
+.moverennavbaraladerecha{
+    margin-left: 30px;
 }
 
-.nav-link .active:hover{
-    color:brown;
+.moverennavbaralaizquierda{
+    margin-right: 30px;
+}
+
+.marginsss{
+    margin:auto;
+}
+
+.nav-item{
+    color: black !important;
+}
+
+
+.nav-item :hover{
+    color:gray !important;
 
 }
+/* Fuente Natbar */
+.asap-condensed-regular-italic {
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .asap-condensed-medium-italic {
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 22px;
+  }
+  
