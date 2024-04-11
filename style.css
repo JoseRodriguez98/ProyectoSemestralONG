@@ -22,16 +22,13 @@
     margin: auto; /* Centrar verticalmente */
     }
 
-.moverennavbaraladerecha{
-    margin-left: 30px;
-}
-
-.moverennavbaralaizquierda{
-    margin-right: 30px;
-}
 
 .marginsss{
     margin:auto;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 30px !important;
 }
 
 .nav-item{
@@ -43,6 +40,7 @@
     color:gray !important;
 
 }
+
 /* Fuente Natbar */
 .asap-condensed-regular-italic {
     font-family: "Asap Condensed", sans-serif;
@@ -57,3 +55,20 @@
     font-size: 22px;
   }
   
+  .redondearboton {
+    border-radius: 30px; /* Puedes ajustar el valor según el radio de redondeo que desees */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  }
+
+  .centrartexto{
+    text-align: center !important;
+  }
+
+  .contenedor_offcanva_usuario{
+    font-family: "Asap Condensed";
+    display: inline-block;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    text-align: center !important;
+    
+  }
