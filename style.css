@@ -93,3 +93,10 @@
     font-size: 25px;
   }
 
+  .letrachida2{
+    font-family: "Asap Condensed";
+    color:white;
+    text-decoration: none; /*pa quitar el subrayado*/
+    font-size:xx-large;
+}
+
