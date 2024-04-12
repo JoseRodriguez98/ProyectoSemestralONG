@@ -27,6 +27,7 @@
     margin:auto;
 }
 
+
 .navbar-nav .nav-item{
     margin-right: 30px !important;
 }
@@ -72,3 +73,23 @@
     text-align: center !important;
     
   }
+
+  .letrachida{
+    font-family: "Asap Condensed";
+    color:aliceblue;
+    text-decoration: none; /*pa quitar el subrayado*/
+  }
+
+  .letrachidacarrito{
+    font-family: "Asap Condensed";
+    font-size: 30px;
+  }
+  
+  .alejarlaimagen{
+    margin: 20px;
+  }
+
+  .agrandarunpoco{ /*para agrandar un poco los span que contienen la cantidad de cosas que va a llevar x producto */
+    font-size: 25px;
+  }
+
