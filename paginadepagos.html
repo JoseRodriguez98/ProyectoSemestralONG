@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Pagos</title>
+    <!--usaremos estilo interno pq son pocas funciones-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8ea913;
+        
+        }
+        .alinear{
+            text-align: center;
+            align-items: center;
+        }
+
+
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="alinear">
+        <h2>Formulario de Pagos<img src="imagenestiendachida/Logo-removebg-preview.png" width="100px"></h2>
+        </div>
+        <form action="#">
+            <label for="nombre">Nombre en la Tarjeta:</label>
+            <input type="text" id="nombre" name="nombre" required><!--el required viene integrado en html5 y hace que me aparezca el msj de necesidad de llenado de campo-->
+
+            <label for="numero">Número de Tarjeta:</label>
+            <input type="text" id="numero" name="numero" required>
+
+            <label for="caducidad">Fecha de Caducidad:</label>
+            <input type="text" id="caducidad" name="caducidad" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="number" id="cvv" name="cvv" required>
+
+            <label for="monto">Monto a Pagar:</label>
+            <input type="number" id="monto" name="monto" required>
+
+            <label for="tipo">Tipo de Tarjeta:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="americanexpress">American Express</option>
+            </select>
+
+            <input type="submit" value="Pagar">
+        </form>
+    </div>
 </body>
 </html>

@@ -49,23 +49,23 @@
     font-style: italic;
   }
   
-  .asap-condensed-medium-italic {
+.asap-condensed-medium-italic {
     font-family: "Asap Condensed", sans-serif;
     font-weight: 500;
     font-style: italic;
     font-size: 22px;
   }
   
-  .redondearboton {
+.redondearboton {
     border-radius: 30px; /* Puedes ajustar el valor según el radio de redondeo que desees */
     padding: 10px 20px; /* Ajusta el relleno según sea necesario */
   }
 
-  .centrartexto{
+.centrartexto{
     text-align: center !important;
   }
 
-  .contenedor_offcanva_usuario{
+.contenedor_offcanva_usuario{
     font-family: "Asap Condensed";
     display: inline-block;
     justify-content: center; /* Centrado horizontal */
@@ -74,22 +74,22 @@
     
   }
 
-  .letrachida{
+.letrachida{
     font-family: "Asap Condensed";
     color:aliceblue;
     text-decoration: none; /*pa quitar el subrayado*/
   }
 
-  .letrachidacarrito{
+.letrachidacarrito{
     font-family: "Asap Condensed";
     font-size: 30px;
   }
   
-  .alejarlaimagen{
+.alejarlaimagen{
     margin: 20px;
   }
 
-  .agrandarunpoco{ /*para agrandar un poco los span que contienen la cantidad de cosas que va a llevar x producto */
+.agrandarunpoco{ /*para agrandar un poco los span que contienen la cantidad de cosas que va a llevar x producto */
     font-size: 25px;
   }
 
@@ -100,3 +100,17 @@
     font-size:xx-large;
 }
 
+.colorh2{
+  font-family: "Asap Condensed";
+  color: black;
+}
+
+.separacion{
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+
+.almedio{
+  padding-left: 500px;
+}
