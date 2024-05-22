@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script_registro.js"></script>
 </head>
 
 <body>
@@ -32,21 +34,25 @@
                 <div id="emailHelp" class="form-text">Tienda Chida! jamás compartirá tus datos personales.</div>
                 <br>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">NOMBRES:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="nombres" class="form-label">NOMBRES:</label>
+                  <input type="text" class="form-control" id="nombres" aria-describedby="nombres" name="nombres">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">APELLIDO PATERNO:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="apellidoPaterno" class="form-label">APELLIDO PATERNO:</label>
+                  <input type="text" class="form-control" id="apellidoPaterno" aria-describedby="apellidoPaterno" name="apellidoPaterno">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">APELLIDO MATERNO:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="apellidoMaterno" class="form-label">APELLIDO MATERNO:</label>
+                  <input type="text" class="form-control" id="apellidoMaterno" aria-describedby="apellidoMaterno" name="apellidoMaterno">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">RUT:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="rut" class="form-label">RUT:</label>
+                  <input type="text" class="form-control" id="rut" aria-describedby="rut" name="rut" required>
+                  <div class="form-text"></div>
+                  <div class="invalid-feedback" id="format-error" style="color: red; display: none;">Formato de RUT inválido. Debe ser 12.345.678-9</div>
+                  <div class="invalid-feedback" id="dv-error" style="color: red; display: none;">RUT no válido, ingrese un RUT existente</div>
                 </div>
+                
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">INGRESA TU EMAIL @:</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
