@@ -1,8 +1,6 @@
 
 
-
-
-
+//aquí está la primera funcion pedida que activa el formato oscuro
 function modoNocturno() {
     console.log("entro aqui");
     document.body.classList.toggle('modo-noc');
