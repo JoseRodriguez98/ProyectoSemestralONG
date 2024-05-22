@@ -127,13 +127,13 @@
 
 .navbar-modo-noc {
   background-color: #333333 !important;
-  color: #ffffff !important;
+  color:  rgb(255, 173, 51) !important;
 }
 
 .navbar-modo-noc .navbar-brand,
 .navbar-modo-noc .nav-link,
 .navbar-modo-noc .dropdown-item {
-  color: #ffffff !important;
+  color:  rgb(255, 173, 51) !important;;
 }
 
 .navbar-modo-noc .navbar-toggler-icon {
