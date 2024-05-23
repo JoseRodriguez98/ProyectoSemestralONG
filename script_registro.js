@@ -199,12 +199,19 @@ $(document).ready(function() {
         }
 
         // Verificar si los campos cumplen con las verificaciones
-        if (!verificarCampo($('#rut'), 'Formato de RUT inválido') ||
-            !verificarCampo($('#email'), 'Email no válido') ||
-            !verificarCampo($('#password'), 'La contraseña debe tener al menos 8 caracteres y al menos una letra mayúscula') ||
-            !verificarCampo($('#confirmPassword'), 'Las contraseñas no coinciden')) {
+        var valid = true;
+        valid = verificarCampo($('#nombres'), 'Campo obligatorio') && valid;
+        valid = verificarCampo($('#apellidoPaterno'), 'Campo obligatorio') && valid;
+        valid = verificarCampo($('#apellidoMaterno'), 'Campo obligatorio') && valid;
+        valid = verificarCampo($('#rut'), 'Formato de RUT inválido') && valid;
+        valid = verificarCampo($('#email'), 'Email no válido') && valid;
+        valid = verificarCampo($('#password'), 'La contraseña debe tener al menos 8 caracteres y al menos una letra mayúscula') && valid;
+        valid = verificarCampo($('#confirmPassword'), 'Las contraseñas no coinciden') && valid;
+
+        if (!valid) {
             return;
         }
+
 
         // Mostrar el modal si todos los campos están llenos y verificados
         mostrarModal();

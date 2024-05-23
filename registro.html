@@ -33,35 +33,47 @@
             <form>
                 <div id="emailHelp" class="form-text">Tienda Chida! jamás compartirá tus datos personales.</div>
                 <br>
+
                 <div class="mb-3">
                   <label for="nombres" class="form-label">NOMBRES:</label>
                   <input type="text" class="form-control" id="nombres" aria-describedby="nombres" name="nombres">
+                  <div class="invalid-feedback">Campo obligatorio</div>
                 </div>
+
                 <div class="mb-3">
                   <label for="apellidoPaterno" class="form-label">APELLIDO PATERNO:</label>
                   <input type="text" class="form-control" id="apellidoPaterno" aria-describedby="apellidoPaterno" name="apellidoPaterno">
+                  <div class="invalid-feedback">Campo obligatorio</div>
                 </div>
+
                 <div class="mb-3">
                   <label for="apellidoMaterno" class="form-label">APELLIDO MATERNO:</label>
                   <input type="text" class="form-control" id="apellidoMaterno" aria-describedby="apellidoMaterno" name="apellidoMaterno">
+                  <div class="invalid-feedback">Campo obligatorio</div>
                 </div>
+
                 <div class="mb-3">
                   <label for="rut" class="form-label">RUT:</label>
                   <input type="text" class="form-control" id="rut" aria-describedby="rut" name="rut" required>
+                  <div class="invalid-feedback">Campo obligatorio</div>
                   <div class="form-text"></div>
                   <div class="invalid-feedback" id="format-error" style="color: red; display: none;">Formato de RUT inválido. Debe ser 12.345.678-9</div>
                   <div class="invalid-feedback" id="dv-error" style="color: red; display: none;">RUT no válido, ingrese un RUT existente</div>
                 </div>
+
                 <div class="mb-3">
                   <label for="email" class="form-label">INGRESA TU EMAIL @:</label>
                   <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+                  <div class="invalid-feedback">Campo obligatorio</div>
                   <div class="invalid-feedback" id="email-error" style="color: red; display: none;">Email no válido, por favor ingrese un email correcto</div>
                 </div>
+
                 <div class="mb-3">
                   <label for="password" class="form-label">CREA TU CONTRASEÑA:</label>
                   <div class="input-group">
                     <input type="password" class="form-control" id="password" aria-describedby="password">
                     <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+                    <div class="invalid-feedback">Campo obligatorio</div>
                   </div>
                   <div class="invalid-feedback" id="password-error"></div>
                 </div>
@@ -71,6 +83,7 @@
                   <div class="input-group">
                     <input type="password" class="form-control" id="confirmPassword" aria-describedby="confirmPassword">
                     <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">Mostrar</button>
+                    <div class="invalid-feedback">Campo obligatorio</div>
                   </div>
                   <div class="invalid-feedback" id="confirmPassword-error"></div>
                 </div>                
