@@ -52,19 +52,28 @@
                   <div class="invalid-feedback" id="format-error" style="color: red; display: none;">Formato de RUT inválido. Debe ser 12.345.678-9</div>
                   <div class="invalid-feedback" id="dv-error" style="color: red; display: none;">RUT no válido, ingrese un RUT existente</div>
                 </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">INGRESA TU EMAIL @:</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+                  <div class="invalid-feedback" id="email-error" style="color: red; display: none;">Email no válido, por favor ingrese un email correcto</div>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">CREA TU CONTRASEÑA:</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" aria-describedby="password">
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+                  </div>
+                  <div class="invalid-feedback" id="password-error"></div>
+                </div>
                 
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">INGRESA TU EMAIL @:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">CREA TÚ CONTRASEÑA:</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">VERIFICA TÚ CONTRASEÑA:</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
+                  <label for="confirmPassword" class="form-label">VERIFICA TU CONTRASEÑA:</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="confirmPassword" aria-describedby="confirmPassword">
+                    <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">Mostrar</button>
+                  </div>
+                  <div class="invalid-feedback" id="confirmPassword-error"></div>
+                </div>                
                 <br>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">CREAR CUENTA</button>
               </form>

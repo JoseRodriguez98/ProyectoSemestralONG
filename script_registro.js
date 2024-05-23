@@ -1,3 +1,4 @@
+/*Validar RUT */
 $(document).ready(function() {
     function calculateDV(rut) {
       var body = rut.slice(0, -1);
@@ -56,3 +57,164 @@ $(document).ready(function() {
       }
     });
   });
+/*Validar email */
+$(document).ready(function() {
+    // Función para validar el formato del email
+    function validateEmail(email) {
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+
+    $('#email').on('input', function() {
+      $('#email-error').hide(); // Oculta el mensaje de error mientras escribe
+      $('#email').removeClass('is-invalid'); // Remueve la clase de inválido
+    });
+
+    $('#email').on('blur', function() {
+      var email = $(this).val();
+      if (email === '') {
+        $('#email-error').hide(); // Oculta el mensaje de error si el campo está vacío
+        $('#email').removeClass('is-invalid'); // Remueve la clase de inválido si está presente
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        $('#email-error').show(); // Muestra el mensaje de error si el email no es válido
+        $('#email').addClass('is-invalid'); // Añade clase para mostrar el campo como inválido
+      } else {
+        $('#email-error').hide(); // Oculta el mensaje de error si el email es válido
+        $('#email').removeClass('is-invalid'); // Remueve la clase de inválido si está presente
+      }
+    });
+  });
+/* Validar contraseña */
+$(document).ready(function() {
+    // Función para validar la contraseña
+    function validatePassword(password) {
+      var passwordPattern = /^(?=.*[A-Z]).{8,}$/;
+      return passwordPattern.test(password);
+    }
+
+    // Función para mostrar u ocultar la contraseña
+    $('#togglePassword').click(function() {
+      var passwordField = $('#password');
+      var passwordFieldType = passwordField.attr('type');
+      var newType = passwordFieldType === 'password' ? 'text' : 'password';
+      passwordField.attr('type', newType);
+      $(this).text(newType === 'password' ? 'Mostrar' : 'Ocultar');
+    });
+
+    $('#toggleConfirmPassword').click(function() {
+      var confirmPasswordField = $('#confirmPassword');
+      var confirmPasswordFieldType = confirmPasswordField.attr('type');
+      var newType = confirmPasswordFieldType === 'password' ? 'text' : 'password';
+      confirmPasswordField.attr('type', newType);
+      $(this).text(newType === 'password' ? 'Mostrar' : 'Ocultar');
+    });
+
+    // Función para limpiar el mensaje de error
+    function clearErrorMessage(errorId) {
+      $('#' + errorId).empty().hide();
+    }
+
+    $('#password, #confirmPassword').on('input', function() {
+      var fieldId = $(this).attr('id');
+      clearErrorMessage(fieldId + '-error');
+    });
+
+    $('#password').on('blur', function() {
+      var password = $(this).val();
+      if (password.length === 0) {
+        return;
+      }
+      if (!validatePassword(password)) {
+        $('#password-error').text('La contraseña debe tener al menos 8 caracteres y al menos una letra mayúscula').show().css('color', 'red');
+      }
+    });
+
+    $('#confirmPassword').on('blur', function() {
+      var confirmPassword = $(this).val();
+      var password = $('#password').val();
+        if (confirmPassword.length === 0) {
+        return;
+      }
+      if (confirmPassword !== password) {
+        $('#confirmPassword-error').text('Las contraseñas no coinciden').show().css('color', 'red');
+      }
+    });
+  });
+/*Validar datos para crear cuenta */
+$(document).ready(function() {
+    // Función para verificar si un campo está vacío
+    function campoVacio(campo) {
+        return campo.val().trim() === '';
+    }
+
+    // Función para verificar si un campo cumple con las verificaciones
+    function verificarCampo(campo, mensajeError) {
+        var valor = campo.val().trim();
+        if (valor === '') {
+            mostrarErrorCampo(campo, mensajeError);
+            return false;
+        }
+        return true;
+    }
+
+    // Función para mostrar el error de un campo
+    function mostrarErrorCampo(campo, mensajeError) {
+        campo.addClass('is-invalid');
+        campo.next('.invalid-feedback').text(mensajeError).show();
+    }
+
+    // Función para ocultar el error de un campo
+    function ocultarErrorCampo(campo) {
+        campo.removeClass('is-invalid');
+        campo.next('.invalid-feedback').hide();
+    }
+
+    // Función para mostrar el modal
+    function mostrarModal() {
+        $('#staticBackdrop').modal('show');
+    }
+
+    // Función para ocultar el modal
+    function ocultarModal() {
+        $('#staticBackdrop').modal('hide');
+    }
+
+    // Manejador de evento para el botón "Crear cuenta"
+    $('.btn-danger').on('click', function() {
+        // Verificar si algún campo está vacío
+        var campos = $('#nombres, #apellidoPaterno, #apellidoMaterno, #rut, #email, #password, #confirmPassword');
+        var camposVacios = campos.filter(function() {
+            return campoVacio($(this));
+        });
+
+        if (camposVacios.length > 0) {
+            alert('Todos los campos son obligatorios.');
+            camposVacios.each(function() {
+                mostrarErrorCampo($(this), 'Campo obligatorio');
+            });
+            return;
+        }
+
+        // Verificar si los campos cumplen con las verificaciones
+        if (!verificarCampo($('#rut'), 'Formato de RUT inválido') ||
+            !verificarCampo($('#email'), 'Email no válido') ||
+            !verificarCampo($('#password'), 'La contraseña debe tener al menos 8 caracteres y al menos una letra mayúscula') ||
+            !verificarCampo($('#confirmPassword'), 'Las contraseñas no coinciden')) {
+            return;
+        }
+
+        // Mostrar el modal si todos los campos están llenos y verificados
+        mostrarModal();
+    });
+
+    // Limpiar los errores al empezar a escribir en un campo
+    $('input').on('input', function() {
+        ocultarErrorCampo($(this));
+    });
+});
+
+  
+  
