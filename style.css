@@ -165,3 +165,8 @@
 .modo-noc .carousel-control-next-icon {
   filter: invert(1); /* Invierte el color de las flechas de control */
 }
+
+.modo-noc .modal-content{
+  background-color: #333333;
+    color: #ffffff;
+}

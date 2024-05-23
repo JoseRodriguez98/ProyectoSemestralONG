@@ -8,9 +8,9 @@ function modoNocturno() {
     if (navbar) {
         navbar.classList.toggle('navbar-modo-noc');
     }
-    const modals = document.querySelectorAll('.modal');
+    const modals = document.querySelectorAll('.modal-content');
     modals.forEach(modal => {
-        modal.classList.toggle('modal-nocturno');
+        modal.classList.toggle('modo-noc');
     })
 }
 
