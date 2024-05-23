@@ -170,3 +170,7 @@
   background-color: #333333;
     color: #ffffff;
 }
+
+.zoom {
+  transition: transform 0.3s ease; /* Suaviza la transición */
+}

@@ -35,3 +35,7 @@ body {
     text-decoration: none; /*pa quitar el subrayado*/
 }
 
+.zoom {
+    transition: transform 0.3s ease; /* Suaviza la transición */
+  }
+
