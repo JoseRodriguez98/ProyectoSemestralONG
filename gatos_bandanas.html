@@ -95,50 +95,23 @@
         
         <!-- Código del offcanvas del Carrito --><!-- aqui esta codeado con ejemplos insertados, es un como se deberia ver-->
         <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-            <div class="offcanvas-header">
+          <div class="offcanvas-header">
               <br>
-                <h5 class="offcanvas-title letrachidacarrito" id="staticBackdropLabel"><img src="imagenestiendachida/monedacarrito.png" width="60px">Carrito de compras <img src="imagenestiendachida/monedacarrito.png" width="60px"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body"><!--aqui sacamos un codigo de bootstrap de list group que se veía bien para un carro de compras-->
-                <div>
-                  <ol class="list-group list-group-numbered">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold">Correa StreetDog</div>
-                        Correa Militar marca StreetDog $9.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/correa2.webp" width="90px">
-                        <h4>Total: $19.980</h4>
-                      </div>
-                      <span class="badge text-bg-warning rounded-pill agrandarunpoco">2</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold">Bandana Escocesa</div>
-                        Bandana Escoseca roja marca TheBlackDog $6.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/bandanaroja.jpg" width="90px">
-                        <h4>Total: $6.990</h4>
-                      </div>
-                      <span class="badge text-bg-warning rounded-pill agrandarunpoco">1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold">Identificación</div>
-                        Identificación huesito personalizada $9.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/identificacion1.webp" width="90px">
-                        <h4>Total: $9.990</h4>
-                      </div>
-                      <span class="badge text-bg-warning rounded-pill agrandarunpoco">1</span>
-                    </li>
-                  </ol>
-                  <br>
-                  <div class="container-fluid">
-                    <div class="row justify-content-center">
-                    <h2 class="col-6 centrartexto">Total: $36.960</h2>
-                    <button type="button" class="btn btn-warning"><a class="letrachida2" href="paginadepagos.html">IR A PAGAR</a></button>
-                  </div>
-                  </div>
-                  
-                </div>
-            </div>
-        </div>
+              <h5 class="offcanvas-title letrachidacarrito" id="staticBackdropLabel">
+                  <img src="imagenestiendachida/monedacarrito.png" width="60px">Carrito de compras
+                  <img src="imagenestiendachida/monedacarrito.png" width="60px">
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="cart">
+              <h2>Carrito de Compras</h2>
+              <ul id="cart-items"></ul>
+              <p>Total: $<span id="total-price">0</span></p>
+          </div>
+          <button type="button" class="btn btn-warning">
+              <a class="letrachida2" href="paginadepagos.html">IR A PAGAR</a>
+          </button>
+      </div>
 
     <!--Navbar naranja-->
     <br><br><br><br><br><br><br>
@@ -187,7 +160,7 @@
                   <br>
                   <h4>$10.990</h4>
                   </p>
-                  <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                  <a href="#" onclick="addToCart('Bandana Russ', 10990 , 'img_tienda_gatos/bandanagato1.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                 </div>
               </div>
             </div>
@@ -204,7 +177,7 @@
                     <br>
                     <h4>$10.990</h4>
                   </p>
-                  <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                  <a href="#" onclick="addToCart('Bandana Russ', 10990 , 'img_tienda_gatos/bandanagato2.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                 </div>
               </div>
             </div>
@@ -221,7 +194,7 @@
                     <br>
                     <h4>$9.990</h4>
                   </p>
-                  <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                  <a href="#" onclick="addToCart('Bandana Maxwell', 9990 , 'img_tienda_gatos/bandanagato3.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                 </div>
               </div>
             </div>
@@ -238,7 +211,7 @@
                     <br>
                     <h4>$11.990</h4>
                   </p>
-                  <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                  <a href="#" onclick="addToCart('Bandana CatNew', 11990 , 'img_tienda_gatos/bandanagato4.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                 </div>
               </div>
             </div>
@@ -256,7 +229,7 @@
                       <br>
                       <h4>$9.990</h4>
                     </p>
-                    <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                    <a href="#" onclick="addToCart('Bandana Perkz', 9990 , 'img_tienda_gatos/bandanagato5.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                   </div>
                 </div>
               </div>
@@ -274,7 +247,7 @@
                       <br>
                       <h4>$10.990</h4>
                     </p>
-                    <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                    <a href="#" onclick="addToCart('Bandana Buen Amigo', 10990 , 'img_tienda_gatos/bandanagato6.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                   </div>
                 </div>
               </div>
@@ -292,7 +265,7 @@
                       <br>
                       <h4>$9.990</h4>
                     </p>
-                    <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                    <a href="#" onclick="addToCart('Bandana Buen Amigo', 9990 , 'img_tienda_gatos/bandanagato7.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                   </div>
                 </div>
               </div>
@@ -309,7 +282,7 @@
                       <br>
                       <h4>10.990</h4>
                     </p>
-                    <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                    <a href="#" onclick="addToCart('Bandana Maxwell', 10990 , 'img_tienda_gatos/bandanagato8.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                   </div>
                 </div>
               </div>
@@ -326,7 +299,7 @@
                       <br>
                       <h4>$10.990</h4>
                     </p>
-                    <a href="#" class="btn btn-primary zoom" data-bs-toggle="modal" data-bs-target="#confirmacioncompra">Agregar al Carrito</a>
+                    <a href="#" onclick="addToCart('Bandana Maxwell', 10990 , 'img_tienda_gatos/bandanagato9.webp')"  class="btn btn-primary zoom">Agregar al Carrito</a>
                   </div>
                 </div>
               </div>

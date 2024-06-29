@@ -94,50 +94,25 @@
     
     <!-- Código del offcanvas del Carrito --><!-- aqui esta codeado con ejemplos insertados, es un como se deberia ver-->
     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-        <div class="offcanvas-header">
+      <div class="offcanvas-header">
           <br>
-            <h5 class="offcanvas-title letrachidacarrito" id="staticBackdropLabel"><img src="imagenestiendachida/monedacarrito.png" width="60px">Carrito de compras <img src="imagenestiendachida/monedacarrito.png" width="60px"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body"><!--aqui sacamos un codigo de bootstrap de list group que se veía bien para un carro de compras-->
-            <div>
-              <ol class="list-group list-group-numbered">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Correa StreetDog</div>
-                    Correa Militar marca StreetDog $9.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/correa2.webp" width="90px">
-                    <h4>Total: $19.980</h4>
-                  </div>
-                  <span class="badge text-bg-warning rounded-pill agrandarunpoco">2</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Bandana Escocesa</div>
-                    Bandana Escoseca roja marca TheBlackDog $6.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/bandanaroja.jpg" width="90px">
-                    <h4>Total: $6.990</h4>
-                  </div>
-                  <span class="badge text-bg-warning rounded-pill agrandarunpoco">1</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Identificación</div>
-                    Identificación huesito personalizada $9.990(c/u):<br><img class="alejarlaimagen" src="imagenestiendachida/identificacion1.webp" width="90px">
-                    <h4>Total: $9.990</h4>
-                  </div>
-                  <span class="badge text-bg-warning rounded-pill agrandarunpoco">1</span>
-                </li>
-              </ol>
-              <br>
-              <div class="container-fluid">
-                <div class="row justify-content-center">
-                <h2 class="col-6 centrartexto">Total: $36.960</h2>
-                <button type="button" class="btn btn-warning"><a class="letrachida2" href="paginadepagos.html">IR A PAGAR</a></button>
-              </div>
-              </div>
-              
-            </div>
-        </div>
-    </div>
+          <h5 class="offcanvas-title letrachidacarrito" id="staticBackdropLabel">
+              <img src="imagenestiendachida/monedacarrito.png" width="60px">Carrito de compras
+              <img src="imagenestiendachida/monedacarrito.png" width="60px">
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="cart">
+          <h2>Carrito de Compras</h2>
+          <ul id="cart-items"></ul>
+          <p>Total: $<span id="total-price">0</span></p>
+      </div>
+      <button type="button" class="btn btn-warning">
+          <a class="letrachida2" href="paginadepagos.html">IR A PAGAR</a>
+      </button>
+  </div>
+
+
     <br><br><br><br><br>
     <!-- aquí añadimos el boton para hacer el modo osucro-->
     <button onclick="modoNocturno()" class="botonnoche zoom">MODO NOCTURNO</button>
@@ -147,7 +122,7 @@
 
     <!--CARRUSEL CON IMAGENES-->
     <div class="container-fluid bg-light"> 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center carclaro">
             <div class="col-9">
               <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
                 <!--data-bs-interval es una clase de bootstrap que sirve para cambiar el tiempo en que se demora en trancicionarse una imagen dentro de un carrusel-->
@@ -261,6 +236,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <script src="scriptindex.js"></script>
+   
 </body>
 </html>
