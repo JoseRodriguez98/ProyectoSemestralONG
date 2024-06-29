@@ -131,3 +131,9 @@ function loadModoNocturnoFromLocalStorage() {
         });
     }
 }
+
+// Añadir evento al botón "IR A PAGAR"
+document.querySelector('.btn.btn-warning a').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = `paginadepagos.html?total=${totalPrice}`;
+});
